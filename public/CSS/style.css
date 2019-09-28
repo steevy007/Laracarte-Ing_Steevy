@@ -3,6 +3,7 @@ body{
 }
 .contenue{
     padding-top: 80px;
+    padding-bottom: 40px;
 }
 .navbar-brand{
     font-size: 1.5rem;

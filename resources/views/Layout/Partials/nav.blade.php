@@ -20,8 +20,8 @@
       <li class="nav-item">
         <a class="nav-link" href="">Artisans</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="">Contact</a>
+      <li class="nav-item {{ helpers::set_active('Contact') }}">
+        <a class="nav-link" href="{{route('Contact')}}">Contact</a>
       </li>
       <li class="nav-item dropdown">
         <a href="" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"

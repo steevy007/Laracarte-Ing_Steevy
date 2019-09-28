@@ -13,3 +13,4 @@
 
 Route::get('/','RootController@index')->name('Home');
 Route::get('about','RootController@about')->name('About');
+Route::get('contact','ContactController@create')->name('Contact');
