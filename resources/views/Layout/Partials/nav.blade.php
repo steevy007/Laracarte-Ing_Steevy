@@ -2,7 +2,7 @@
 <div class="container-fluide ">
     <!--Navbar -->
 <nav class=" navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar elegant-color-dark">
-  <a class="navbar-brand" href="{{route('Home')}}">Laracarte</a>
+  <a class="navbar-brand" href="{{route('Home')}}">{{config('app.name')}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
     aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
