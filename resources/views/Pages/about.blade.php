@@ -22,7 +22,7 @@ Laracarte | About
     </div>
 
     <p>
-        Lorem ipsum dolor sit amet. <a href="#">Code Source</a>
+        Lorem ipsum dolor sit amet. <a href="https://github.com/steevy007/Laracarte-Ing_Steevy" target="_blank">Code Source</a>
     </p>
 
     <hr>

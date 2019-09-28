@@ -1,3 +1,4 @@
+<?php namespace App\Helpers; ?>
 <div class="container-fluide ">
     <!--Navbar -->
 <nav class=" navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar elegant-color-dark">
@@ -8,12 +9,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{{route('Home')}}">Home
+      <li class="nav-item {{ helpers::set_active('Home') }}">
+        <a class="nav-link " href="{{route('Home')}}">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{ helpers::set_active('About') }}">
         <a class="nav-link" href="{{route('About')}}">About</a>
       </li>
       <li class="nav-item">
