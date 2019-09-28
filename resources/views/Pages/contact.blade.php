@@ -9,24 +9,24 @@ Laracarte | Contact
    <h2>Get In Touch</h2>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, asperiores?
-        <a href="mailto:steevesanon6@gmail.com"><strong>Help</strong></a>
+        <a href="mailto:{{config('Laracarte.admin_support_email')}}"><strong>Help</strong></a>
     </p>
     <form action="{{route('contact.store')}}" method="post">
     
         {{csrf_field()}}
         <div class="form-group ">
         <label for=""><i class="fas fa-signature "></i> Nom</label>
-        <input class="form-control " name="nom" type="text" placeholder="Medium input" required>
+        <input class="form-control " value="{{ old('nom') }}" name="nom" type="text" placeholder="Medium input" required>
         {!!$errors->first('nom','<p class="Err">:message</p>')!!}
         </div>
         <div class="form-group">
         <label for=""><i class="fas fa-at"></i> Email</label>
-        <input class="form-control" name="email" type="email" placeholder="Medium input" required>
+        <input class="form-control" value="{{ old('email') }}" name="email" type="email" placeholder="Medium input" required>
         {!!$errors->first('email','<p class="Err">:message</p>')!!}
         </div>
         <div class="form-group purple-border">
         <label for="exampleFormControlTextarea4"><i class="far fa-comment-alt"></i> Message</label>
-        <textarea class="form-control" name="message" id="exampleFormControlTextarea4" rows="10" required></textarea>
+        <textarea class="form-control" name="message" id="exampleFormControlTextarea4" rows="10" required>{{ old('message') }}</textarea>
         {!!$errors->first('message','<p class="Err">:message</p>')!!}
         </div>
 

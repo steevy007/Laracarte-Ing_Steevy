@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +24,12 @@
     <title>@yield('titre')</title>
 </head>
 <body>
+    @include ('flashy::message')
     @include('Layout\Partials.nav')
     <div class="contenue">
     @yield('contenue')
     </div>
     @include('Layout\Partials.footer')
+    
 </body>
 </html>

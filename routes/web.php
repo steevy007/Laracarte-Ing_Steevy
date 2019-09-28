@@ -1,5 +1,5 @@
 <?php
-
+use App\Mail\ContactMessageCreated;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,3 +15,6 @@ Route::get('/','RootController@index')->name('Home');
 Route::get('about','RootController@about')->name('About');
 Route::get('contact','ContactController@create')->name('Contact');
 Route::post('contact','ContactController@store')->name('contact.store');
+Route::get('/messages',function(){
+    return new ContactMessageCreated('Sanon Steeve','steevesanon6@gmail.com','Je suis un message');
+});
