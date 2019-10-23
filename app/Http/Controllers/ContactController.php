@@ -21,7 +21,7 @@ class ContactController extends Controller
             'email'=>$request->email,
             'message'=>$request->message
         ]);*/
-    
+        //sleep(3);
         $Message=Message::create($request->only('nom','email','message'));
         Mail::to(config('Laracarte.admin_support_email'))->send(new ContactMessageCreated($Message));
         //session()->flash('message','Message Envoye Avec Succes !!!!');

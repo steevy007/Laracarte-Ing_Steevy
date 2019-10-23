@@ -28,13 +28,13 @@
           aria-haspopup="true" aria-expanded="false">Planet
         </a>
         <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="laravel.com">Laravel.com</a>
-          <a class="dropdown-item" href="laravel.io">Laravel.io</a>
-          <a class="dropdown-item" href="laracasts.com">Laracasts</a>
+          <a class="dropdown-item" href="http://laravel.com">Laravel.com</a>
+          <a class="dropdown-item" href="http://laravel.io">Laravel.io</a>
+          <a class="dropdown-item" href="http://laracasts.com">Laracasts</a>
         
-          <a class="dropdown-item" href="larajobs.com">Larajobs</a>
-          <a class="dropdown-item" href="laravel-news.com">Laravel News</a>
-          <a class="dropdown-item" href="larachat.com">Larachat</a>
+          <a class="dropdown-item" href="http://larajobs.com">Larajobs</a>
+          <a class="dropdown-item" href="http://laravel-news.com">Laravel News</a>
+          <a class="dropdown-item" href="http://larachat.com">Larachat</a>
         </div>
       </li>
     </ul>
