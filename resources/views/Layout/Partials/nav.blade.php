@@ -1,4 +1,6 @@
-<?php namespace App\Helpers; ?>
+<?php namespace App\Helpers; 
+      use Illuminate\Support\Facades\Auth;
+?>
 <div class="container-fluide ">
     <!--Navbar -->
 <nav class=" navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar elegant-color-dark">
@@ -39,16 +41,31 @@
       </li>
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
+      @guest
         <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('login')}}">
         <i class="fas fa-sign-in-alt"></i>
         Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('register')}}">
         <i class="far fa-registered"></i>
         Register</a>
-      </li><!--
+      </li>
+      @else
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> {{ Auth::user()->name }}
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit()"><i class="fas fa-sign-out-alt"></i> Deconnecter</a>
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
+            @csrf
+         </form>
+        </div>
+      </li>
+      <li>HIDEHIDEHIEHIDE</li>
+      <!--
       <li class="nav-item">
         <a class="nav-link waves-effect waves-light">
           <i class="fab fa-twitter"></i>
@@ -72,6 +89,7 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>-->
+      @endguest
     </ul>
   </div>
 </nav>

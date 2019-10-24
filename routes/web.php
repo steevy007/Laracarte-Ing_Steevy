@@ -18,3 +18,10 @@ Route::post('contact','ContactController@store')->name('contact.store');
 Route::get('/messages',function(){
     return new ContactMessageCreated('Sanon Steeve','steevesanon6@gmail.com','Je suis un message');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes(['verify'=>true]);
+
+//Route::get('/home', 'HomeController@index')->name('home');
